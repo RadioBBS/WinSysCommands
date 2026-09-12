@@ -1,0 +1,39 @@
+# WinSysCommands – Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und Langbeschreibung und startet den gewaehlten Eintrag.
+#
+# Projekt:     WinSysCommands
+# Modul:       requirements.txt
+# Version:     1.0.0
+# Stand:       2026-09-12
+# Abhaengig:   Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – Stdlib only)
+# Lizenz:      MIT
+# Upstream:    –
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.0.0 – 2026-09-12 – Leere Bezugdatei; GUI und Starten ueber Stdlib.
+#
+# Geprueft: https://pypi.org/ und https://docs.python.org/3/library/
+# (tkinter, argparse, subprocess, shutil reichen).
+#
+# Dieses Produkt braucht zur Laufzeit keine pip-Pakete. Fester Installationsweg
+# (No-Op, pip ignoriert Kommentare):
+#
+#     python -m pip install -r requirements.txt
+#
+# Empfohlen (venv):
+#
+#     python -m venv .venv
+#     .venv\Scripts\activate
+#     python -m pip install -r requirements.txt
+#
+#     python3 -m venv .venv
+#     source .venv/bin/activate
+#     python3 -m pip install -r requirements.txt
+#
+# Systemvoraussetzungen:
+#
+#     Windows: Python mit tkinter (Standard-Installer), explorer.exe (System)
+#     Linux-Tests: sudo apt-get install python3-tk

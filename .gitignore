@@ -1,0 +1,34 @@
+# WinSysCommands – Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und Langbeschreibung und startet den gewaehlten Eintrag.
+#
+# Projekt:     WinSysCommands
+# Modul:       .gitignore
+# Version:     1.0.0
+# Stand:       2026-09-12
+# Abhaengig:   Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – Stdlib only)
+# Lizenz:      MIT
+# Upstream:    –
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+
+# Lokale Arbeitsverzeichnisse (Styleguide)
+__local__/
+__scratch__/
+__testdata__/
+
+# Logs und Umgebung
+*.log
+.env
+
+# Python-Cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Editor/Betriebssystem
+.vscode/
+Thumbs.db
+Desktop.ini

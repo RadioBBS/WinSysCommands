@@ -1,0 +1,93 @@
+# WinSysCommands – Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und Langbeschreibung und startet den gewaehlten Eintrag.
+# Styleguide 2.0.4 / Software-Standard 1.5.1 – Agent zuerst diese Datei lesen.
+#
+# Projekt:     WinSysCommands
+# Modul:       PROJECT.yaml
+# Version:     1.0.0
+# Stand:       2026-09-12
+# Abhaengig:   Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – Stdlib only)
+# Lizenz:      MIT
+# Upstream:    –
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.0.0 – 2026-09-12 – Oeffentlicher Befehlskatalog mit GUI.
+# Version 1.0.0 – 2026-09-12 – Eigenes Fenstericon; Invertocat nur als Repo-Link.
+# Version 1.0.0 – 2026-09-13 – Python-Powered-Logo als Sprachhinweis.
+
+name: WinSysCommands
+description: "Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und Langbeschreibung und startet den gewaehlten Eintrag."
+language: python
+python_min: "3.10"
+license: MIT
+version: "1.0.0"
+stand: "2026-09-12"
+author: (FFHB) / RadioBBS
+upstream: "–"
+scripts:
+  - winsyscommands.py
+  - project_meta.py
+  - wsc_icons.py
+files:
+  winsyscommands.py: "CLI und Programmeinstieg; startet GUI, Liste oder Einzelstart."
+  wsc_gui.py: "Tkinter-Oberflaeche mit Registerkarten, Aufruflinks und Detailspalte."
+  wsc_icons.py: "Laedt Fenstericon, GitHub-Invertocat und Python-Powered-Logo."
+  wsc_katalog.py: "Katalogzugriff fuer Systembefehle und 20 Kategorien."
+  wsc_daten.py: "Die 20 Kategorie-Gruppen als maschinenlesbarer Katalog."
+  wsc_system.py: "Eintraege der ersten Karte Systembefehle (control.exe, *.cpl)."
+  wsc_launch.py: "Startlogik fuer URI, Explorer, MMC, PowerShell und Konsole."
+  project_meta.py: "Gemeinsame Metadaten fuer Koepfe, CLI und Tests."
+  PROJECT.yaml: "Maschinenlesbare Projektdefinition; Quelle fuer GitHub-About und Dateizwecke."
+  pyproject.toml: "PEP-621-Metadaten, gleiche Version und Beschreibung."
+  README.md: "Zweck, Installation, Aufruf, Risiken, Tests (Deutsch)."
+  CHANGELOG.md: "Aenderungsverlauf in Nutzersprache."
+  LICENSE: "MIT-Lizenztext."
+  CITATION.cff: "Zitation fuer das oeffentliche Repo."
+  requirements.txt: "Leere pip-Bezugdatei (Stdlib only)."
+  .gitignore: "Ausschluss von Logs, venv, lokalen Ordnern."
+  .gitattributes: "Textdateien mit automatischer Normalisierung."
+  .github/workflows/ci.yml: "CI: unittest ohne GUI-Fachlauf."
+  tests/__init__.py: "Paketmarkierung fuer unittest."
+  tests/test_winsyscommands.py: "Unittests ohne Produktionsdaten."
+  assets/README.md: "Hinweis zu Fenstericon, GitHub-Marke und Python-Logo."
+  assets/app-icon.png: "Eigenes Fenstericon, ersetzt die Tcl/Tk-Feder."
+  assets/github-mark.png: "Offizielles Invertocat, nur als Link zum Repository."
+  assets/python-powered.png: "Offizielles Python-Powered-Logo, nur als Sprachhinweis."
+repository:
+  host: github
+  name: WinSysCommands
+  url: "https://github.com/RadioBBS/WinSysCommands"
+  visibility: public
+  default_branch: main
+  github_about: "Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und Langbeschreibung und startet den gewaehlten Eintrag."
+standards:
+  styleguide: "2.0.4"
+  styleguide_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\0-Style‑Guide.txt"
+  software_standard: "1.5.1"
+  software_standard_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\MY-SOFTWARE-STANDARD v1.0.0.txt"
+testing:
+  framework: unittest
+  command: python -m unittest tests.test_winsyscommands
+  required: true
+  live_network: false
+cli:
+  help: [--help, -h]
+  version: [--version]
+  wait_at_end: [--Ende, -E]
+  extra: [--kategorie, --list, --starten, --yes]
+maintenance:
+  status: active
+  owner: RadioBBS
+documentation:
+  language: de
+security:
+  secrets_in_repo: false
+  scans_dot_directories: false
+machine_readable:
+  - PROJECT.yaml
+  - pyproject.toml
+  - CITATION.cff
+  - .github/workflows/ci.yml
