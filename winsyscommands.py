@@ -33,6 +33,9 @@ Aufruf / Nutzung
 
 from __future__ import annotations
 
+import os
+import platform
+
 import argparse
 import sys
 
@@ -195,6 +198,77 @@ def wait_ende() -> None:
         return
 
 
+def _ausgabe_ist_terminal() -> bool:
+    """Meldet, ob stdout ein Terminal ist.
+
+    Rückgabewert:
+        True bei einem Terminal.
+
+    Fehlerfälle:
+        Eine fehlende isatty-Methode gilt als kein Terminal.
+
+    Beispiel:
+        _ausgabe_ist_terminal()
+    """
+    try:
+        return bool(sys.stdout.isatty())
+    except (AttributeError, ValueError):
+        return False
+
+
+def print_startup_banner() -> None:
+    """Gibt Kurzname, Zweck und Version vor dem Fachlauf aus.
+
+    Rückgabewert:
+        None
+
+    Fehlerfälle:
+        Keine.
+
+    Beispiel:
+        print_startup_banner()
+    """
+    if sys.platform == "win32":
+        os.system("")
+    name = meta.PROJEKT
+    zweck = meta.BESCHREIBUNG
+    version = meta.VERSION
+    stand = meta.STAND
+    innen = f"  {name}  "
+    linie = "═" * len(innen)
+    farbe = "\033[96m" if _ausgabe_ist_terminal() else ""
+    aus = "\033[0m" if farbe else ""
+    print(f"{farbe}╔{linie}╗{aus}")
+    print(f"{farbe}║{innen}║{aus}")
+    print(f"{farbe}╚{linie}╝{aus}")
+    print(zweck)
+    print()
+    print(f"Version {version}  |  {stand}")
+    print()
+
+
+def pruefe_plattform() -> None:
+    """Beendet den Fachlauf, wenn das Betriebssystem nicht zugesagt ist.
+
+    Rückgabewert:
+        None auf einem zugesagten System.
+
+    Fehlerfälle:
+        SystemExit 1 auf anderen Systemen.
+
+    Beispiel:
+        pruefe_plattform()
+    """
+    system = platform.system()
+    if system in {"Windows"}:
+        return
+    print(
+        "FEHLER: Dieses Programm läuft unter Windows 11 "
+        f"(erkannt: {system}).",
+        file=sys.stderr,
+    )
+    raise SystemExit(1)
+
 def main(argv: list[str] | None = None) -> int:
     """Programmeinstieg: Hilfe, Liste, Start oder GUI.
 
@@ -224,12 +298,15 @@ def main(argv: list[str] | None = None) -> int:
             print_help(parser)
         elif args.version:
             print_version()
-        elif args.starten:
-            code = starten_cli(args.starten, args.kategorie, args.yes)
-        elif args.list:
-            code = liste_ausgeben(args.kategorie)
         else:
-            code = starte_gui(args.kategorie)
+            print_startup_banner()
+            pruefe_plattform()
+            if args.starten:
+                code = starten_cli(args.starten, args.kategorie, args.yes)
+            elif args.list:
+                code = liste_ausgeben(args.kategorie)
+            else:
+                code = starte_gui(args.kategorie)
     finally:
         if args.ende:
             wait_ende()
