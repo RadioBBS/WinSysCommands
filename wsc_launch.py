@@ -3,9 +3,9 @@ WinSysCommands – Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabel
 
 Projekt:     WinSysCommands
 Modul:       wsc_launch.py
-Version:     1.0.0
-Stand:       2026-09-12
-Abhaengig:   Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.10 Stdlib
+Version:     1.0.1
+Stand:       2026-11-02
+Abhaengig:   Python >= 3.11 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.11 Stdlib
 Bezug:       requirements.txt (leer – Stdlib only)
 Lizenz:      MIT
 Upstream:    –
@@ -19,6 +19,7 @@ Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und L
 Historie
 --------
 Version 1.0.0 – 2026-09-12 – MMC per ShellExecute, shell:Temp auf %TEMP%.
+Version 1.0.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 
 Aufruf / Nutzung
 ----------------

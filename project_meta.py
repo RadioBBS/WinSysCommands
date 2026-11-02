@@ -3,9 +3,9 @@ WinSysCommands – Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabel
 
 Projekt:     WinSysCommands
 Modul:       project_meta.py
-Version:     1.0.0
-Stand:       2026-09-12
-Abhaengig:   Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.10 Stdlib
+Version:     1.0.1
+Stand:       2026-11-02
+Abhaengig:   Python >= 3.11 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.11 Stdlib
 Bezug:       requirements.txt (leer – Stdlib only)
 Lizenz:      MIT
 Upstream:    –
@@ -21,6 +21,7 @@ Historie
 Version 1.0.0 – 2026-09-12 – Erste gemeinsame Metadatenquelle.
 Version 1.0.0 – 2026-09-12 – GITHUB_URL fuer den Invertocat-Link.
 Version 1.0.0 – 2026-09-13 – PYTHON_URL fuer den Python-Powered-Hinweis.
+Version 1.0.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 
 Aufruf / Nutzung
 ----------------
@@ -32,12 +33,12 @@ Wird importiert, nicht als Programm gestartet:
 from __future__ import annotations
 
 PROJEKT = "WinSysCommands"
-VERSION = "1.0.0"
-STAND = "2026-09-12"
+VERSION = "1.0.1"
+STAND = "2026-11-02"
 LIZENZ = "MIT"
 UPSTREAM = "–"
 AUTOR = "(FFHB) / RadioBBS"
-PYTHON_MIN = "3.10"
+PYTHON_MIN = "3.11"
 ERSTELLT_MIT = "Cursor Grok 4.6"
 SKRIPT = "winsyscommands.py"
 
@@ -47,8 +48,8 @@ BESCHREIBUNG = (
 )
 
 ABHAENGIG = (
-    "Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, "
-    "powershell; Tests: Python >= 3.10 Stdlib"
+    "Python >= 3.11 Stdlib (tkinter, argparse); Windows: explorer, cmd, "
+    "powershell; Tests: Python >= 3.11 Stdlib"
 )
 BEZUG = "requirements.txt (leer – Stdlib only)"
 LOG_STAMP = "%Y-%m-%d %H:%M:%S"

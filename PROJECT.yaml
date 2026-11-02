@@ -1,11 +1,11 @@
 # WinSysCommands – Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und Langbeschreibung und startet den gewaehlten Eintrag.
-# Styleguide 2.0.4 / Software-Standard 1.5.1 – Agent zuerst diese Datei lesen.
+# Styleguide 2.1.0 / Software-Standard 1.6.0 – Agent zuerst diese Datei lesen.
 #
 # Projekt:     WinSysCommands
 # Modul:       PROJECT.yaml
-# Version:     1.0.0
-# Stand:       2026-09-12
-# Abhaengig:   Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.10 Stdlib
+# Version:     1.0.1
+# Stand:       2026-11-02
+# Abhaengig:   Python >= 3.11 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.11 Stdlib
 # Bezug:       requirements.txt (leer – Stdlib only)
 # Lizenz:      MIT
 # Upstream:    –
@@ -17,14 +17,15 @@
 # Version 1.0.0 – 2026-09-12 – Oeffentlicher Befehlskatalog mit GUI.
 # Version 1.0.0 – 2026-09-12 – Eigenes Fenstericon; Invertocat nur als Repo-Link.
 # Version 1.0.0 – 2026-09-13 – Python-Powered-Logo als Sprachhinweis.
+# Version 1.0.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 
 name: WinSysCommands
 description: "Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und Langbeschreibung und startet den gewaehlten Eintrag."
 language: python
-python_min: "3.10"
+python_min: "3.11"
 license: MIT
-version: "1.0.0"
-stand: "2026-09-12"
+version: "1.0.1"
+stand: "2026-11-02"
 author: (FFHB) / RadioBBS
 upstream: "–"
 scripts:
@@ -64,9 +65,9 @@ repository:
   default_branch: main
   github_about: "Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabellen mit Kurz- und Langbeschreibung und startet den gewaehlten Eintrag."
 standards:
-  styleguide: "2.0.4"
+  styleguide: "2.1.0"
   styleguide_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\0-Style‑Guide.txt"
-  software_standard: "1.5.1"
+  software_standard: "1.6.0"
   software_standard_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\MY-SOFTWARE-STANDARD v1.0.0.txt"
 testing:
   framework: unittest

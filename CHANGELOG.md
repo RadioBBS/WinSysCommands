@@ -5,17 +5,23 @@ WinSysCommands – Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabel
 
 Projekt:     WinSysCommands
 Modul:       CHANGELOG.md
-Version:     1.0.0
-Stand:       2026-09-12
-Abhaengig:   Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.10 Stdlib
+Version:     1.0.1
+Stand:       2026-11-02
+Abhaengig:   Python >= 3.11 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.11 Stdlib
 Bezug:       requirements.txt (leer – Stdlib only)
 Lizenz:      MIT
 Upstream:    –
 Erstellt mit: Cursor Grok 4.6
 Autor:       (FFHB) / RadioBBS
+
+Historie
+--------
+Version 1.0.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 ```
 
 Format: `Version X.Y.Z – YYYY-MM-DD – Beschreibung` (neueste unten).
+
+## Version 1.0.1 – 2026-11-02 – Startausgabe, Python 3.11, Plattformprüfung.
 
 ## Version 1.0.0 – 2026-09-12
 

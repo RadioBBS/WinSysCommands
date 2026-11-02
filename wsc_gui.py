@@ -3,9 +3,9 @@ WinSysCommands – Zeigt Windows-Systembefehle und 20 Befehlskategorien in Tabel
 
 Projekt:     WinSysCommands
 Modul:       wsc_gui.py
-Version:     1.0.0
-Stand:       2026-09-12
-Abhaengig:   Python >= 3.10 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.10 Stdlib
+Version:     1.0.1
+Stand:       2026-11-02
+Abhaengig:   Python >= 3.11 Stdlib (tkinter, argparse); Windows: explorer, cmd, powershell; Tests: Python >= 3.11 Stdlib
 Bezug:       requirements.txt (leer – Stdlib only)
 Lizenz:      MIT
 Upstream:    –
@@ -21,6 +21,7 @@ Historie
 Version 1.0.0 – 2026-09-12 – Tabellen mit Aufruflinks, 3x7-Kategorien, scharfe Calibri.
 Version 1.0.0 – 2026-09-12 – Eigenes Fenstericon; GitHub-Invertocat als Repo-Link.
 Version 1.0.0 – 2026-09-13 – Python-Powered-Logo als Hinweis auf die Programmiersprache.
+Version 1.0.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 
 Aufruf / Nutzung
 ----------------
